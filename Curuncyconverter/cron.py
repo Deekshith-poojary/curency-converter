@@ -5,7 +5,7 @@ url="http://data.fixer.io/api/latest?access_key=6a6fec6c6d0efd917035b378fde538ee
 t=time.time()
 
 def load_data():
-    j=open('data.json','w')
+    j=open('Curuncyconverter\data.json','w')
     j.truncate()
     j.close()
     res=requests.get(url)
