@@ -5,11 +5,11 @@ url="http://data.fixer.io/api/latest?access_key=6a6fec6c6d0efd917035b378fde538ee
 t=time.time()
 
 def load_data():
-    j=open('Curuncyconverter\data.json','w')
+    j=open('Curuncyconverter/data.json','w')
     j.truncate()
     j.close()
     res=requests.get(url)
-    with open('Curuncyconverter\data.json','w') as json:
+    with open('Curuncyconverter/data.json','w') as json:
         json.write(res.text)
     json.close()
 
@@ -19,7 +19,7 @@ def fetch_data():
         load_data()
         t=time.time()+3600
 
-with open("Curuncyconverter\data.json",'r') as f:
+with open("Curuncyconverter/data.json",'r') as f:
     js=json.load(f)
     inr=js['rates']['INR']
 
